@@ -1,0 +1,111 @@
+:root {
+  --primary-color: black;
+  --secondary-color: dimgray;
+  --text-color:chartreuse;
+}
+
+body {
+    background-color: var(--primary-color);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animace {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transform: scale(0.4);
+}
+
+.animace img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.animace img:nth-child(2) {
+  position: absolute;
+  top: calc(100% - 90px);
+  left: 0;
+  animation-name: pohyb-obrazku;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pohyb-obrazku {
+  0% {
+    top: calc(100% - 90px);
+  }
+  50% {
+    top: calc(50% - 90px);
+  }
+  100% {
+    top: calc(100% - 90px);
+  }
+}
+
+.navcolor {
+  max-width: 1500px;
+  background-color: var(--secondary-color);
+}
+
+nav {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  background-color: var(--secondary-color);
+  height: 210px;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 40;
+}
+
+a {
+  font-size: xx-large;
+}
+
+@media only screen and (max-width: 600px){
+  .imgheader {
+      display:none;
+  }
+
+  .icon1 {
+      display:none;
+  }
+
+  .topnav {
+      display:inline-block;
+  }}
+
+.grid-container {
+    display: grid;
+    grid-template: 150px / auto auto auto;
+    grid-gap: 10px;
+    background-color: var(--primary-color);
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  @media only screen and (max-width: 600px){
+    .grid-continer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-row: repeat(5, 500px);
+        grid-auto-flow: dense;
+    }
+    }
+

@@ -1,0 +1,156 @@
+* {box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Unbounded:wght@200;500&display=swap');
+
+:root {
+    --primary-color: black;
+    --secondary-color: dimgray;
+    --text-color:chartreuse;
+    --h1-size: 2rem;
+  }
+
+body {
+    background-color: var(--primary-color);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: var(--h1-size);
+    font-family: 'Raleway', sans-serif, cursive;
+}
+
+.navcolor {
+    max-width: 1500px;
+    background-color: var(--secondary-color);
+}
+
+.icon1 {
+    padding-left: 320px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 40;
+}
+
+a {
+    font-size: xx-large;
+}
+
+p {
+    color: var(--text-color);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav {
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--secondary-color);
+    height: 210px;
+}
+
+header {
+    position: relative;
+    height: 200px;
+    background-color: var(--primary-color);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(34, 20px);
+    grid-template-rows: repeat(21, 20px);
+    grid-template-areas:
+        ". W W W . ."
+        "W W W W W ."
+        "W . W . W ."
+        "W W W W W ."
+        "W W W W W ."
+        "W . W . W ."
+    }
+
+    .cw {
+        background-color: rgb(255, 255, 255);
+        grid-area: W;
+      }
+
+@media only screen and (max-width: 600px){
+    .imgheader {
+        display:none;
+    }
+
+    .icon1 {
+        display:none;
+    }
+
+    .topnav {
+        display:inline-block;
+    }
+
+
+}
+
+main {
+    max-width: 1000px;
+}
+
+    .main1 {
+        display:flex;
+        margin:auto;
+    }
+
+    .main2 {
+        display:flex;
+        margin:auto;
+    }
+
+    .main3 {
+        display:flex;
+        margin:auto;
+    }
+
+.text1 {
+    padding-left: 20px;
+}
+
+form {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+  }
+  
+  form > input, form > button {
+    padding: 6px;
+    border: 4px solid var(--secondary-color);
+    font-size: 32px;
+  }
+  
+  form > input[type=text] {
+    flex: 0 1 100%;
+    color: var(--secondary-color);
+    border-radius: 12px 0 0 12px;
+  }
+  
+  form > input[type=text]:focus {
+    background-color: lavender;
+    outline: none;
+  }
+  
+  form > button {
+    flex: 0 0 80px;
+    background-color: var(--secondary-color);
+    color: rgb(19, 1, 1);
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+  }
+
+footer {
+    color: var(--text-color);
+}
+
